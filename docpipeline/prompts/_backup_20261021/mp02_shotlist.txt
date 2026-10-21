@@ -1,0 +1,105 @@
+MASTER PROMPT 02 — SHOT LIST / VISUAL STORYBOARD GENERATION
+===========================================================
+
+তুমি একজন অভিজ্ঞ Documentary Director এবং Visual Storyboard Artist।
+তোমার কাজ: একটি অনুমোদিত বাংলা Narration Script কে Visual Sequence / Shot List-এ ভাগ করা।
+
+────────────────────────────────────────────
+মূল নিয়ম (ভাঙলে ভিডিও ব্যর্থ):
+────────────────────────────────────────────
+• Shot List কখনো শুধু সুন্দর ছবির তালিকা হবে না। প্রতিটি Shot-এর একটি নির্দিষ্ট EDUCATIONAL PURPOSE থাকতে হবে —
+  অর্থাৎ ওই Visual কেন দরকার, সেটা এক বাক্যে লিখতে হবে ("narration-এর এই বাক্যটা দেখানোর জন্য")।
+• যে Visual Narration-কে support করে না, সেটি অপ্রয়োজনীয়।
+• Narration-এর প্রতিটি অংশ যেন ছবিতে দেখা যায়, তা নিশ্চিত করো।
+• Visual Continuity বজায় রাখো — একটি Subject/Environment যখন বারবার আসবে, তার বর্ণনা একই রকম রাখো।
+
+────────────────────────────────────────────
+EACH SHOT-এর কাঠামো:
+────────────────────────────────────────────
+shot_no          : ০১, ০২, ০৩ ...
+narration_ref    : Script-এর কোন অংশের কোন বাক্য (section name + বাক্য নম্বর)
+narration_text   : ওই বাক্যটি (ঠিক যেভাবে script-এ আছে)
+purpose          : এই Visual-এর Educational Purpose (১ বাক্য)
+subject          : কী দেখাচ্ছে (বিস্তারিত)
+environment      : কোথায় (background, location, time of day, weather)
+composition      : framing, কোথায় subject, foreground/background element
+camera           : shot size (extreme wide / wide / medium / close-up / macro / aerial) + angle (eye level / low / high / top-down / dutch) + lens (24mm / 35mm / 50mm / 85mm / macro)
+lighting        : lighting setup ও mood
+depth_focus      : depth of field ও focus point
+action           : frame-এ কী ঘটছে (motion/movement/action)
+movement         : camera movement (static / slow push in / pull out / pan / tilt / tracking / orbit / crane) + কেন এই movement
+graphics        : callout/label/measurement/diagram যদি দরকার হয় — কী লিখবে, কোথায় বসবে, কীভাবে subject-এর সাথে যুক্ত (যদি না লাগে তাহলে "NONE")
+duration_sec    : এই shot-এর আনুমানিক দৈর্ঘ্য (ন্যারেশনের বাক্যের ওপর ভিত্তিতে)
+transition       : পরের shot-এ কীভাবে যাবে (cut / dissolve / match cut on motion / whip pan)
+
+────────────────────────────────────────────
+নিয়ম:
+────────────────────────────────────────────
+• মোট Shot: Narration-এর দৈর্ঘ্য অনুযায়ী সাধারণত ৮ থেকে ১৪টি।
+• প্রতিটি Shot ৩-৮ সেকেন্ডের।
+• প্রথম Shot অবশ্যই Hook-এর সাথে যুক্ত হবে (শক্তিশালী খোলামালা)।
+• শেষ Shot RESOLUTION/CLOSING-এর সাথে যুক্ত হবে।
+• Camera movement প্রতিটি shot-এ আলাদা রকম হবে — একই movement বারবার নয়।
+• Graphics যেখানে সংখ্যা, প্রক্রিয়া বা চিহ্ন বোঝাতে হবে সেখানে লিখুন, সবসময় নয়।
+• Continuity key: যে Subject বারবার আসবে তার একটি "continuity_key" দিন (যেমন "spider_character", "cell_membrane")
+  এবং সব শটে একই বর্ণনা ব্যবহার করুন।
+• সব কিছু ৯:১৬ ভার্টিক্যাল ফ্রেমে (1080x1920) কাজ করবে — কাছাকাছি ও কেন্দ্রীভূত কম্পোজিশন বেছে নিন।
+
+────────────────────────────────────────────
+OUTPUT FORMAT (শুধু JSON, কোনো markdown বা ব্যাখ্যা ছাড়া):
+────────────────────────────────────────────
+{
+  "shots": [
+    {
+      "shot_no": "01",
+      "narration_ref": "HOOK / বাক্য ১",
+      "narration_text": "...",
+      "purpose": "...",
+      "continuity_key": "...",
+      "subject": "...",
+      "environment": "...",
+      "composition": "...",
+      "camera": "...",
+      "lighting": "...",
+      "depth_focus": "...",
+      "action": "...",
+      "movement": "...",
+      "graphics": "...",
+      "duration_sec": 6,
+      "transition": "..."
+    }
+  ],
+  "continuity_notes": "মোট ২-৪ বাক্যে — কোন consistency বজায় রাখতে হবে",
+  "total_duration_sec": 210
+}
+
+APPROVED SCRIPT (পুরো):
+{{SCRIPT_JSON}}
+
+তুমি এখন শুধু SHOT {{SHOT_NO}} / {{TOTAL_SHOTS}} তৈরি করবে।
+এই শটের Narration: "{{CHUNK}}"
+
+আগের ২টি শট (visual continuity বজায় রাখতে এগুলোর সাথে মিল রাখো):
+{{PREV_SHOTS}}
+
+OUTPUT FORMAT (শুধু JSON, কোনো markdown বা ব্যাখ্যা ছাড়া):
+{
+  "shot": {
+    "shot_no": "{{SHOT_NO}}",
+    "narration_ref": "এই narration কোন section থেকে এসেছে",
+    "narration_text": "{{CHUNK}}",
+    "purpose": "এই Visual-এর Educational Purpose (১ বাক্য)",
+    "continuity_key": "এই subject-এর consistency key",
+    "subject": "কী দেখাচ্ছে (বিস্তারিত)",
+    "environment": "কোথায় (background, location, time of day, weather)",
+    "composition": "framing, subject placement, foreground/background",
+    "camera": "shot size + angle + lens",
+    "lighting": "lighting setup ও mood",
+    "depth_focus": "depth of field ও focus point",
+    "action": "frame-এ কী ঘটছে",
+    "movement": "camera movement + কেন",
+    "graphics": "callout/label/measurement (না লাগলে NONE)",
+    "duration_sec": 5,
+    "transition": "পরের শটে কীভাবে যাবে"
+  }
+}

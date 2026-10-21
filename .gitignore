@@ -1,0 +1,24 @@
+# নোড মডিউল
+node_modules/
+.npm/
+
+# পাইপলাইন আউটপুট
+docpipeline/projects/
+remotion-lab/out-test*/
+remotion-lab/sfx-out/
+*.mp4
+*.wav
+*.pcm
+*.bin
+*.zip
+*.tar.gz
+
+# লগ ও লক
+*.log
+docpipeline/.pipeline.lock
+docpipeline/server.log
+
+# এডিটর
+.DS_Store
+.idea/
+.vscode/
