@@ -71,15 +71,15 @@ export const TitleCard: React.FC = () => {
       >
         <div
           style={{
-            fontSize: 104,
+            fontSize: 112,
             fontWeight: 600,
-            letterSpacing: 2,
+            letterSpacing: 8,
             color: theme.colors.text,
             lineHeight: 1.25,
             textShadow: '0 0 70px rgba(201,162,39,0.28)',
           }}
         >
-          মৃত্যুভাণ
+          কবর
         </div>
 
         <div
@@ -94,14 +94,27 @@ export const TitleCard: React.FC = () => {
 
         <div
           style={{
-            marginTop: 32,
-            fontSize: 34,
+            marginTop: 30,
+            fontSize: 36,
             fontWeight: 400,
-            letterSpacing: 8,
+            letterSpacing: 6,
+            color: theme.colors.text,
+            opacity: 0.92,
+          }}
+        >
+          জসীমউদ্দীন
+        </div>
+
+        <div
+          style={{
+            marginTop: 16,
+            fontSize: 24,
+            fontWeight: 400,
+            letterSpacing: 4,
             color: theme.colors.muted,
           }}
         >
-          রবীন্দ্রনাথ ঠাকুর
+          ‘রাখালী’ কাব্য · ১৯২৫
         </div>
       </div>
     </AbsoluteFill>

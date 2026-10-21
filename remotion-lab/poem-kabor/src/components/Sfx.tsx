@@ -7,7 +7,6 @@ export type SfxEvent = {
   volume?: number;
 };
 
-// স্ট্যানজা ব্রেকে chime, লাইন বদলে মৃদু pop — কবিতার স্বরে বিরল
 export const SFX_EVENTS: SfxEvent[] = [
   {
     "name": "thud",
@@ -16,62 +15,62 @@ export const SFX_EVENTS: SfxEvent[] = [
   },
   {
     "name": "pop",
-    "at": 23,
+    "at": 24,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 749,
+    "at": 750,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 821,
+    "at": 795,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 969,
+    "at": 970,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 1251,
+    "at": 1046,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 1650,
+    "at": 1651,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 1754,
+    "at": 1746,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 1838,
+    "at": 1789,
+    "volume": 0.05
+  },
+  {
+    "name": "chime",
+    "at": 1938,
+    "volume": 0.13
+  },
+  {
+    "name": "pop",
+    "at": 2097,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 1937,
+    "at": 2230,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 2098,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 2229,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 2388,
+    "at": 2389,
     "volume": 0.05
   },
   {
@@ -81,157 +80,157 @@ export const SFX_EVENTS: SfxEvent[] = [
   },
   {
     "name": "pop",
-    "at": 2689,
+    "at": 2690,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 2700,
+    "at": 2701,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 2716,
+    "at": 2712,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 2732,
+    "at": 2723,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 3421,
+    "at": 3422,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 3505,
+    "at": 3447,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 3592,
+    "at": 3492,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 3714,
+    "at": 3715,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 3869,
+    "at": 3795,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 4091,
+    "at": 4092,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 4282,
+    "at": 4174,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 4457,
+    "at": 4233,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 4654,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 4859,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 4968,
+    "at": 4272,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 5236,
+    "at": 4860,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 5393,
+    "at": 4961,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 5706,
+    "at": 5237,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 5777,
+    "at": 5317,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 6129,
-    "volume": 0.13
-  },
-  {
-    "name": "chime",
-    "at": 6295,
-    "volume": 0.13
-  },
-  {
-    "name": "chime",
-    "at": 6465,
-    "volume": 0.13
-  },
-  {
-    "name": "chime",
-    "at": 6706,
-    "volume": 0.13
-  },
-  {
-    "name": "chime",
-    "at": 6940,
-    "volume": 0.13
-  },
-  {
-    "name": "chime",
-    "at": 7087,
+    "at": 5707,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 7160,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 7341,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 7550,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 7774,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 7918,
+    "at": 5778,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 8142,
+    "at": 6130,
+    "volume": 0.13
+  },
+  {
+    "name": "chime",
+    "at": 6296,
+    "volume": 0.13
+  },
+  {
+    "name": "chime",
+    "at": 6466,
+    "volume": 0.13
+  },
+  {
+    "name": "chime",
+    "at": 6707,
+    "volume": 0.13
+  },
+  {
+    "name": "chime",
+    "at": 6941,
+    "volume": 0.13
+  },
+  {
+    "name": "chime",
+    "at": 7088,
+    "volume": 0.13
+  },
+  {
+    "name": "pop",
+    "at": 7159,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 7277,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 7470,
+    "volume": 0.05
+  },
+  {
+    "name": "chime",
+    "at": 7775,
+    "volume": 0.13
+  },
+  {
+    "name": "pop",
+    "at": 7919,
+    "volume": 0.05
+  },
+  {
+    "name": "chime",
+    "at": 8143,
     "volume": 0.13
   },
   {
@@ -241,7 +240,7 @@ export const SFX_EVENTS: SfxEvent[] = [
   },
   {
     "name": "chime",
-    "at": 8604,
+    "at": 8605,
     "volume": 0.13
   },
   {
@@ -251,17 +250,17 @@ export const SFX_EVENTS: SfxEvent[] = [
   },
   {
     "name": "pop",
-    "at": 8767,
+    "at": 8766,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 8854,
+    "at": 8853,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 9072,
+    "at": 8864,
     "volume": 0.05
   },
   {
@@ -271,67 +270,67 @@ export const SFX_EVENTS: SfxEvent[] = [
   },
   {
     "name": "pop",
-    "at": 9455,
+    "at": 9380,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 9589,
+    "at": 9590,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 9747,
+    "at": 9724,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 9910,
+    "at": 9911,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 10057,
-    "volume": 0.05
-  },
-  {
-    "name": "chime",
-    "at": 10243,
-    "volume": 0.13
-  },
-  {
-    "name": "pop",
-    "at": 10421,
+    "at": 9980,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 11120,
+    "at": 10244,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 11168,
+    "at": 10326,
+    "volume": 0.05
+  },
+  {
+    "name": "chime",
+    "at": 11121,
+    "volume": 0.13
+  },
+  {
+    "name": "pop",
+    "at": 11166,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 11207,
+    "at": 11204,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 11241,
+    "at": 11215,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 11281,
+    "at": 11282,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 11495,
+    "at": 11496,
     "volume": 0.05
   },
   {
@@ -341,222 +340,222 @@ export const SFX_EVENTS: SfxEvent[] = [
   },
   {
     "name": "pop",
-    "at": 11850,
+    "at": 11681,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 12134,
+    "at": 12135,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 12280,
+    "at": 12281,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 12462,
+    "at": 12461,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 12640,
+    "at": 12639,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 12844,
+    "at": 12845,
     "volume": 0.13
   },
   {
     "name": "chime",
-    "at": 13022,
+    "at": 13023,
     "volume": 0.13
   },
   {
     "name": "chime",
-    "at": 13179,
+    "at": 13180,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 13242,
+    "at": 13204,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 13290,
+    "at": 13289,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 13777,
+    "at": 13776,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 13882,
+    "at": 13879,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 13983,
+    "at": 13928,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 14093,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 14224,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 14420,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 14616,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 14812,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 14968,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 15143,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 15283,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 15446,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 15602,
+    "at": 13982,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 15804,
+    "at": 14225,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 15961,
+    "at": 14298,
     "volume": 0.05
   },
   {
     "name": "pop",
+    "at": 14353,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 14813,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 14900,
+    "volume": 0.05
+  },
+  {
+    "name": "chime",
+    "at": 15144,
+    "volume": 0.13
+  },
+  {
+    "name": "pop",
+    "at": 15278,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 15447,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 15526,
+    "volume": 0.05
+  },
+  {
+    "name": "chime",
+    "at": 15805,
+    "volume": 0.13
+  },
+  {
+    "name": "pop",
+    "at": 15929,
+    "volume": 0.05
+  },
+  {
+    "name": "chime",
     "at": 16126,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 16278,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 16446,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 16643,
-    "volume": 0.05
-  },
-  {
-    "name": "chime",
-    "at": 16878,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 17036,
+    "at": 16224,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 17216,
+    "at": 16447,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 17479,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 17558,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 17681,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 17825,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 17988,
+    "at": 16532,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 18192,
+    "at": 16879,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 18302,
+    "at": 16958,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 17217,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 17480,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 17559,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 17680,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 17697,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 17773,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 18522,
+    "at": 18193,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 18632,
+    "at": 18267,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 18825,
+    "at": 18523,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 18996,
+    "at": 18605,
+    "volume": 0.05
+  },
+  {
+    "name": "chime",
+    "at": 18826,
+    "volume": 0.13
+  },
+  {
+    "name": "pop",
+    "at": 18843,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 19203,
+    "at": 19204,
     "volume": 0.05
   },
   {
@@ -566,42 +565,42 @@ export const SFX_EVENTS: SfxEvent[] = [
   },
   {
     "name": "pop",
-    "at": 19602,
+    "at": 19603,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 19780,
+    "at": 19706,
+    "volume": 0.05
+  },
+  {
+    "name": "chime",
+    "at": 19957,
+    "volume": 0.13
+  },
+  {
+    "name": "pop",
+    "at": 20126,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 19956,
+    "at": 20326,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 20125,
+    "at": 20433,
     "volume": 0.05
   },
   {
-    "name": "pop",
-    "at": 20325,
-    "volume": 0.05
+    "name": "chime",
+    "at": 20700,
+    "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 20519,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 20699,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 20944,
+    "at": 20720,
     "volume": 0.05
   }
 ];

@@ -60,6 +60,42 @@ function buildLayout(cue) {
   return { id: 'statement', title: text, style: 'statement' };
 }
 
+// ---------------- দৃশ্য বরাদ্দ ----------------
+// কবিতার প্রতিটি লাইনে আলাদা চিত্রকল্প — keyword মিল থেকে।
+const SCENE_KW = {
+  grave:   ['কবর','মাটি','কাফন','কোদাল','গায়','দেশে','ঘুমায়','অন্ধারে','খুঁড়ে','কাটাত','চাপা','লাশ'],
+  jasmine: ['ডালিম','বাগান','গাছ','শাখা','পাতা','ছায়া','বট','তরু','ফুল'],
+  night:   ['জোনকি','ঝিঁঝি','রাত','নিঝঝুম','নিরালা','অন্ধকার','চাঁদ','তারা','জ্যোৎস্না','ঘুম'],
+  mosque:  ['মজিদ','আযান','জোড়হাত','মোনাজাত','খোদা','রহমান','দোয়া','আয়','নামাজ'],
+  child:   ['ফুপু','বুজি','বুজী','ছোট','সোনামুখ','মুখখানি','গোলগাল','প্রতিমা','খবর','ছবি','খেলা'],
+  village: ['হাট','লাঙল','জোয়াল','তরমুজ','পয়সা','মাজন','তামাক','চাবি','গাড়ী','ধান','ক্ষেত','বাট','বাড়ি','দুয়ার','নথি','চিঠি'],
+  river:   ['সমুর','নদী','নৌকা','জল','কূলু','ঢেউ','নামিয়ে'],
+  forest:  ['বনে','আবির','সন্ধ্যা','ঝিঁঝিড়','গুঁড়ো','বন','ডানা','পড়িতে','লুটায়ে'],
+  tears:   ['কেঁদে','কাঁদিয়া','বেদনা','শোক','ভাসাইত','ব্যথা','আঁখিজল','নয়ন-জল','অশ্রু','কপাল','কাঁদে'],
+  hands:   ['হাত','ধরিয়া','জড়ায়ে','ড়ায়ে','আলিঙ্গন','বুকে','কোলে','চুমি','ধরে','ধরি','হাতে'],
+  time:    ['জীবন','দিনরাত','বছর','কাল','আজ','রোজকেয়ামত','ভবিষ্যৎ','প্রাণ','মৃত্যু','সাঁঝ','সময়'],
+  dawn:    ['ভেস্ত','নসিব','আগামী','যাওয়া','চলে গেছে','দূরে','আসবে','ফিরে','প্রত্যাশা','উদয়','সকাল'],
+};
+const SCENE_ORDER = Object.keys(SCENE_KW);
+const SCENE_PRIO = {grave:9, jasmine:8, night:8, mosque:9, child:8, village:7, river:8, forest:8, tears:7, hands:6, time:5, dawn:5};
+
+function pickScene(text, prev) {
+  let best = null, bs = 0;
+  for (const k of SCENE_ORDER) {
+    let hits = 0;
+    for (const w of SCENE_KW[k]) if (text.includes(w)) hits++;
+    if (!hits) continue;
+    let s = hits * 2 + SCENE_PRIO[k] * 0.3;
+    if (k === prev) s -= 3.2;
+    if (s > bs) { bs = s; best = k; }
+  }
+  if (!best) {
+    const cands = SCENE_ORDER.filter((k) => k !== prev);
+    best = cands[text.length % cands.length];
+  }
+  return best;
+}
+
 // ---------------- ফাইল লেখা ----------------
 
 function writeFile(dir, rel, content) {
@@ -230,16 +266,34 @@ function generate(srtPath, outDir, opts = {}) {
   const fCues = toFrames(cues, fps);
   const rawScenes = buildScenes(fCues, opts.scenes || {});
 
+  let prevScene = null;
   const scenes = rawScenes.map((s) => {
     const layout = buildLayout(s.cues[0]);
+    const sc = pickScene(layout.title || '', prevScene);
+    prevScene = sc;
+    layout.scene = sc;
+    const startF = s.cues[0].startFrame;
+    const endF = s.cues[s.cues.length - 1].endFrame;
     return {
       index: s.index,
-      startFrame: s.cues[0].startFrame,
-      endFrame: s.cues[s.cues.length - 1].endFrame,
-      durationInFrames: Math.max(1, s.cues[s.cues.length - 1].endFrame - s.cues[0].startFrame),
+      startFrame: startF,
+      endFrame: endF,
+      // লেখার দৈর্ঘ্য (লেখা ফেড আউট হয় এই সময়ে)
+      textFrames: Math.max(1, endF - startF),
+      // দৃশ্য পরের সিন শুরু পর্যন্ত চলে — ফাঁকে কালো পর্দা থাকে না
+      durationInFrames: Math.max(1, endF - startF),
       layout,
     };
   });
+  // শেষের দিকে দৃশ্য পরের সিন শুরু পর্যন্ত বাড়াই
+  for (let i = 0; i < scenes.length - 1; i++) {
+    const gap = scenes[i + 1].startFrame - scenes[i].startFrame;
+    if (gap > scenes[i].durationInFrames) scenes[i].durationInFrames = gap;
+    // লেখা পরের লাইন আসার আগ পর্যন্ত থাকে — স্ক্রিন কখনও ফাঁকা হয় না,
+    // আর লেখা বদলায় ঠিক যখন ভয়েস পরের লাইনে যায়
+    scenes[i].textFrames = scenes[i].durationInFrames;
+  }
+  scenes[scenes.length - 1].textFrames = scenes[scenes.length - 1].durationInFrames;
 
   const totalFrames = fCues[fCues.length - 1].endFrame + Math.round(fps * 0.6);
 
