@@ -16,592 +16,592 @@ export const SFX_EVENTS: SfxEvent[] = [
   },
   {
     "name": "pop",
-    "at": 60,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 225,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 405,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 570,
+    "at": 23,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 795,
+    "at": 749,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 975,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 1155,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 1335,
+    "at": 821,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 1635,
+    "at": 969,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 1815,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 1995,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 2175,
+    "at": 1251,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 2475,
+    "at": 1650,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 2655,
+    "at": 1754,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 2820,
+    "at": 1838,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 3015,
+    "at": 1937,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 3180,
+    "at": 2098,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 3360,
+    "at": 2229,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 3540,
+    "at": 2388,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 3720,
+    "at": 2528,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 2689,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 2700,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 2716,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 2732,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 3945,
+    "at": 3421,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 4125,
+    "at": 3505,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 4305,
+    "at": 3592,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 4485,
+    "at": 3714,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 4650,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 4830,
+    "at": 3869,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 5100,
+    "at": 4091,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 5280,
+    "at": 4282,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 5445,
+    "at": 4457,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 5625,
+    "at": 4654,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 5820,
+    "at": 4859,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 6000,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 6165,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 6345,
+    "at": 4968,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 6615,
+    "at": 5236,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 6780,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 6960,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 7140,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 7335,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 7515,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 7695,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 7875,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 8055,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 8220,
+    "at": 5393,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 8475,
+    "at": 5706,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 8655,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 8835,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 9015,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 9210,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 9390,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 9570,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 9750,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 9960,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 10140,
+    "at": 5777,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 10365,
+    "at": 6129,
+    "volume": 0.13
+  },
+  {
+    "name": "chime",
+    "at": 6295,
+    "volume": 0.13
+  },
+  {
+    "name": "chime",
+    "at": 6465,
+    "volume": 0.13
+  },
+  {
+    "name": "chime",
+    "at": 6706,
+    "volume": 0.13
+  },
+  {
+    "name": "chime",
+    "at": 6940,
+    "volume": 0.13
+  },
+  {
+    "name": "chime",
+    "at": 7087,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 10545,
+    "at": 7160,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 10725,
+    "at": 7341,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 10905,
+    "at": 7550,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 11070,
+    "at": 7774,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 11250,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 11430,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 11610,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 11790,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 11970,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 12180,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 12360,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 12555,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 12735,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 12915,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 13095,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 13275,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 13455,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 13620,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 13800,
+    "at": 7918,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 14070,
+    "at": 8142,
+    "volume": 0.13
+  },
+  {
+    "name": "chime",
+    "at": 8345,
+    "volume": 0.13
+  },
+  {
+    "name": "chime",
+    "at": 8604,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 14250,
+    "at": 8714,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 14430,
+    "at": 8767,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 14610,
+    "at": 8854,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 14805,
+    "at": 9072,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 14985,
+    "at": 9308,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 15165,
+    "at": 9455,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 15345,
+    "at": 9589,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 15525,
+    "at": 9747,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 15705,
+    "at": 9910,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 15885,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 16065,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 16230,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 16410,
+    "at": 10057,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 16620,
+    "at": 10243,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 16800,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 16980,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 17160,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 17340,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 17520,
+    "at": 10421,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 17775,
+    "at": 11120,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 17955,
+    "at": 11168,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 18135,
+    "at": 11207,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 18315,
+    "at": 11241,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 18480,
+    "at": 11281,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 18660,
+    "at": 11495,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 18840,
+    "at": 11609,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 19020,
+    "at": 11850,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 19245,
+    "at": 12134,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 19425,
+    "at": 12280,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 19590,
+    "at": 12462,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 19770,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 19950,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 20130,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 20310,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 20490,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 20670,
-    "volume": 0.05
-  },
-  {
-    "name": "pop",
-    "at": 20850,
+    "at": 12640,
     "volume": 0.05
   },
   {
     "name": "chime",
-    "at": 21075,
+    "at": 12844,
+    "volume": 0.13
+  },
+  {
+    "name": "chime",
+    "at": 13022,
+    "volume": 0.13
+  },
+  {
+    "name": "chime",
+    "at": 13179,
     "volume": 0.13
   },
   {
     "name": "pop",
-    "at": 21255,
+    "at": 13242,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 21420,
+    "at": 13290,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 21600,
+    "at": 13777,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 21780,
+    "at": 13882,
     "volume": 0.05
   },
   {
     "name": "pop",
-    "at": 21960,
+    "at": 13983,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 14093,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 14224,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 14420,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 14616,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 14812,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 14968,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 15143,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 15283,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 15446,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 15602,
+    "volume": 0.05
+  },
+  {
+    "name": "chime",
+    "at": 15804,
+    "volume": 0.13
+  },
+  {
+    "name": "pop",
+    "at": 15961,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 16126,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 16278,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 16446,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 16643,
+    "volume": 0.05
+  },
+  {
+    "name": "chime",
+    "at": 16878,
+    "volume": 0.13
+  },
+  {
+    "name": "pop",
+    "at": 17036,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 17216,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 17479,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 17558,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 17681,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 17825,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 17988,
+    "volume": 0.05
+  },
+  {
+    "name": "chime",
+    "at": 18192,
+    "volume": 0.13
+  },
+  {
+    "name": "pop",
+    "at": 18302,
+    "volume": 0.05
+  },
+  {
+    "name": "chime",
+    "at": 18522,
+    "volume": 0.13
+  },
+  {
+    "name": "pop",
+    "at": 18632,
+    "volume": 0.05
+  },
+  {
+    "name": "chime",
+    "at": 18825,
+    "volume": 0.13
+  },
+  {
+    "name": "pop",
+    "at": 18996,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 19203,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 19388,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 19602,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 19780,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 19956,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 20125,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 20325,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 20519,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 20699,
+    "volume": 0.05
+  },
+  {
+    "name": "pop",
+    "at": 20944,
     "volume": 0.05
   }
 ];

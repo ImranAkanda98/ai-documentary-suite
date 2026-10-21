@@ -1,7 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame, interpolate, Easing} from 'remotion';
 import {theme} from '../theme';
-import {WordByWord} from './WordByWord';
 
 type Scene = any;
 
