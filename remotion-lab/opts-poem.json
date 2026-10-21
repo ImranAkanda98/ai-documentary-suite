@@ -1,5 +1,5 @@
 {
-  "name": "mrityubhan",
+  "name": "kabor",
   "scenes": {
     "maxCuesPerScene": 1,
     "minGapSec": 0,
@@ -14,5 +14,6 @@
     "muted": "#8A8d96",
     "surface": "#14161C",
     "font": "Noto Serif Bengali"
-  }
+  },
+  "audioDuration": 729.260408
 }

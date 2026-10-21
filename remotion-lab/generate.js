@@ -156,6 +156,7 @@ const tsconfig = JSON.stringify({
     skipLibCheck: true,
     esModuleInterop: true,
     allowSyntheticDefaultImports: true,
+    resolveJsonModule: true,
   },
   include: ['src'],
 }, null, 2);
@@ -295,7 +296,19 @@ function generate(srtPath, outDir, opts = {}) {
   }
   scenes[scenes.length - 1].textFrames = scenes[scenes.length - 1].durationInFrames;
 
-  const totalFrames = fCues[fCues.length - 1].endFrame + Math.round(fps * 0.6);
+  // অডিও যত লম্বা, ভিডিও তত লম্বা হবে — শেষ লাইনের কথা কাটা না যায়
+  const audioFrames = Math.round((opts.audioDuration || 0) * fps);
+  const totalFrames = Math.max(fCues[fCues.length - 1].endFrame, audioFrames) + Math.round(fps * 0.8);
+
+  // শেষ সিনও ভিডিওর শেষ পর্যন্ত চলে — শেষে খালি পর্দা থাকে না
+  if (scenes.length) {
+    const last = scenes[scenes.length - 1];
+    const need = totalFrames - last.startFrame;
+    if (need > last.durationInFrames) {
+      last.durationInFrames = need;
+      last.textFrames = need;
+    }
+  }
 
   // ---------------- ফাইল লেখা ----------------
   fs.mkdirSync(outDir, { recursive: true });

@@ -1,7 +1,8 @@
 import React from 'react';
-import {AbsoluteFill, useCurrentFrame, interpolate, Easing} from 'remotion';
+import {AbsoluteFill, useCurrentFrame, interpolate, Easing, Img, staticFile} from 'remotion';
 import {theme} from '../theme';
 import {SceneVisual, SceneKind} from './Scenes';
+import ASSETS from '../assets.json';
 
 type Scene = any;
 
@@ -38,19 +39,42 @@ export const PoemLine: React.FC<{scene: Scene}> = ({scene}) => {
     extrapolateRight: 'clamp',
   });
 
+  // এই লাইনের AI ছবি (থাকলে)
+  // scene.index ০-ভিত্তিক, ছবির নাম ১-ভিত্তিক
+  const file = 'line-' + String((scene.index || 0) + 1).padStart(3, '0') + '.jpg';
+  const img = (ASSETS as string[]).indexOf(file) >= 0 ? file : null;
+
   // শব্দে শব্দে, ব্লার থেকে পরিষ্কার
   const words = text.split(/\s+/).filter(Boolean);
 
   return (
     <AbsoluteFill style={{overflow: 'hidden'}}>
-      {/* দৃশ্য — প্রতিটি লাইনে আলাদা চিত্রকল্প */}
-      <SceneVisual kind={kind} variant={scene.index || 0} />
+      {/* AI ছবি (থাকলে) অথবা SVG দৃশ্য */}
+      {img ? (
+        <AbsoluteFill style={{overflow: 'hidden'}}>
+          <Img
+            src={staticFile('assets/' + img)}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              // ধীরে কেন-বার্নস — ছবি জীবন্ত মনে হোক
+              transform:
+                'scale(' + (1.06 + (frame % 900) / 900 * 0.05) + ') translate(' +
+                Math.sin(frame / 120) * 6 + 'px,' + Math.cos(frame / 145) * 5 + 'px)',
+              filter: 'brightness(0.98) contrast(1.04) saturate(0.98)',
+            }}
+          />
+        </AbsoluteFill>
+      ) : (
+        <SceneVisual kind={kind} variant={scene.index || 0} />
+      )}
 
       {/* লেখার জন্য হালকা স্ক্রিম (পাঠযোগ্যতার জন্য) */}
       <AbsoluteFill
         style={{
           background:
-            'radial-gradient(ellipse 58% 42% at 50% 52%, rgba(4,5,8,0.55), rgba(4,5,8,0.12) 70%, transparent 84%)',
+            'radial-gradient(ellipse 56% 40% at 50% 52%, rgba(4,5,8,0.34), rgba(4,5,8,0.08) 72%, transparent 86%)',
         }}
       />
 
@@ -70,7 +94,7 @@ export const PoemLine: React.FC<{scene: Scene}> = ({scene}) => {
             alignItems: 'center',
             width: '100%',
             // কাচের প্যানেল — দৃশ্য থাকবে চারপাশে, লেখা পড়া যাবে নিশ্চিত
-            background: 'rgba(6,7,11,0.52)',
+            background: 'rgba(6,7,11,0.40)',
             backdropFilter: 'blur(14px)',
             WebkitBackdropFilter: 'blur(14px)',
             borderRadius: 28,

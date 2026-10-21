@@ -413,7 +413,7 @@ export const SceneVisual: React.FC<{kind: SceneKind; variant?: number}> = ({kind
         transform:
           'translate(' + driftX + 'px,' + driftY + 'px) scale(' + zoom + ') rotate(' + rot + 'deg)',
         filter:
-          'brightness(' + (1.34 + (v % 4) * 0.06).toFixed(2) +
+          'brightness(' + (1.42 + (v % 4) * 0.06).toFixed(2) +
           ') contrast(1.07) hue-rotate(' + hue + 'deg) saturate(' + sat + ')',
         transformOrigin: '50% 50%',
       }}
